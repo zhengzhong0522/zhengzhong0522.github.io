@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Say hello to Blog
-subtitle:   Record what I learn by writing blog
+subtitle:   
 date:       2019-12-06
 author:     Hex
 header-img: img/post-bg-swift.jpg
@@ -9,5 +9,6 @@ catalog:    true
 tags:
     - Life
 ---
-# Hello blog
-I am so excited to have a personal blog, and start to write and record my programming study career. I hope that I can insist writing blogs and do not give up in the half way!
+## Hey folks!
+
+It's so exciting for me to start writing tech blog, and I appreciate that you are here! I am gonna write blogs to record my programming career, and I also hope my experience and knowledge bring you ideas!
