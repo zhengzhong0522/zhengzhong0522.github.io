@@ -2,7 +2,7 @@
 layout:     post
 title:      Say hello to Blog
 subtitle:   Record what I learn by writing blog
-date:       2019-11-20
+date:       2019-12-06
 author:     Hex
 header-img: img/post-bg-swift.jpg
 catalog:    true
