@@ -1,4 +1,4 @@
- ---
+---
 layout:     post
 title:      Say hello to Blog
 subtitle:   Record what I learn by writing blog
