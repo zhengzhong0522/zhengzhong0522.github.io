@@ -11,4 +11,4 @@ tags:
 ---
 ## Hey folks!
 
-It's so exciting for me to start writing tech blog, and I appreciate that you are here! I am gonna write blogs to record my programming career, and I also hope my experience and knowledge bring you ideas!
+ It's so exciting for me to start writing tech blog, and I appreciate that you are here! I am gonna write blogs to record my programming career, and I also hope my experience and knowledge bring you ideas!
