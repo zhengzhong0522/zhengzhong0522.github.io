@@ -1,7 +1,7 @@
 ---
 layout:     post
-title:      Unix System-Level I/O
-subtitle:   Buffer structure in Unix I/O System
+title:      Unix System-Level I/O (1)
+subtitle:   
 date:       2019-12-06
 author:     Hex
 header-img: img/post-bg-linux.jpg
@@ -81,3 +81,57 @@ one syscall per integer read = inefficient!
 “reads” from that buffer  
 
 ![step2](https://tva1.sinaimg.cn/large/006tNbRwgy1g9okpj8682j30tc0i4jsp.jpg)
+
+
+### fread/fwrite warped by buffering
+
+To achieve the buffering, C library has already provided us with warped function like *fread*, *fwrite*, *printf* and so on.
+
+Let's see how they work, although their performance might be a little weird for starter.
+
+```C
+int main() {
+  printf("h");
+  printf("e");
+  printf("l");
+  printf("l");
+  printf("o");
+  fork();
+}
+```
+*fork* create a child process and the child process inherits data, files, signals and so on from its parent process. In this example, we can see there is nothing the child process can do after it is created, since there is no more instruction after *fork* a child process. So most people might guess the output should be ```hello```.  
+But...
+```
+$ ./.a.out
+hellohello
+```
+🤬  
+Yes, it **is** the output. I was shocked when I first time saw this. And I think we should blame on "buffering" that it gives us the weird output. LOL
+
+Here is a property of stream buffer:
+
+- stream buffer can *absorb* multiple writes
+before being flushed to underlying file
+
+and flush happens on:
+- buffer being filled
+- (normal) process termination
+- newline, in a line-buffered stream
+- explicitly, with fflush
+
+Among the above example, there is no newline(/n) after character each time we print it. Of course, the buffer is more larger than we think, so it is not filled. Also, no fflush called. Therefore, the stream would not be "print" on screen until the child process terminated and reaped.   
+Each time, we call *printf*, the character is push into a stream buffer, before forking a child, the buffer contains "hello". As I mentioned before, the child process will inherit data, variable, file from parent process, so the buffer contains "hello" is brought to the child process.
+There is no remaining to do in the child process, so it is terminated. Then the stream buffer in the child process is fflushed(printed). After child terminates, its parent terminates as well and buffer is fflushed. As a result, the output is gonna be **hellohello**.
+
+#### Things get more confusing when we perform both Input/Output....
+
+I will discuss it in my next blog.
+
+
+<br>
+
+
+#### References:
+Michael Saelee: Input/Output  <https://moss.cs.iit.edu/cs351/slides/slides-io.pdf>
+
+Randal Bryant: Computer Systems: A Programmer's Perspective
