@@ -77,4 +77,7 @@ one syscall per integer read = inefficient!
 
 ![step1](https://tva1.sinaimg.cn/large/006tNbRwgy1g9okjt89gzj30z60cgq3y.jpg)
 
-2.
+2. avoid system calls and process future
+“reads” from that buffer  
+
+![step2](https://tva1.sinaimg.cn/large/006tNbRwgy1g9okpj8682j30tc0i4jsp.jpg)
