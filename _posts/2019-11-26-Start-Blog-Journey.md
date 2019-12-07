@@ -1,7 +1,7 @@
 ---
 layout:     post
 title:      Say hello to Blog
-subtitle:   " "
+subtitle:   
 date:       2019-11-26
 author:     Hex
 header-img: img/post-bg-swift.jpg
