@@ -2,7 +2,7 @@
 layout:     post
 title:      Say hello to Blog
 subtitle:   " "
-date:       2019-12-06
+date:       2019-11-26
 author:     Hex
 header-img: img/post-bg-swift.jpg
 catalog:    true

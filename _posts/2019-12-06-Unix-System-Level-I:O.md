@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout:     post
 title:      Unix System-Level I/O
 subtitle:   Buffer structure in Unix I/O System
@@ -8,7 +8,7 @@ header-img: img/post-bg-linux.jpg
 catalog:    true
 tags:
     - Unix
---- -->
+---
 
 > Let's get to know unix I/O design!
 
