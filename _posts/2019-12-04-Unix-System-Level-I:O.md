@@ -123,9 +123,8 @@ Among the above example, there is no newline(/n) after character each time we pr
 Each time, we call *printf*, the character is push into a stream buffer, before forking a child, the buffer contains "hello". As I mentioned before, the child process will inherit data, variable, file from parent process, so the buffer contains "hello" is brought to the child process.
 There is no remaining to do in the child process, so it is terminated. Then the stream buffer in the child process is fflushed(printed). After child terminates, its parent terminates as well and buffer is fflushed. As a result, the output is gonna be **hellohello**.
 
-#### Things get more confusing when we perform both Input/Output....
+#### Continue to discuss buffering fread/fwrite in next blog...
 
-I will discuss it in my next blog.
 
 
 <br>
