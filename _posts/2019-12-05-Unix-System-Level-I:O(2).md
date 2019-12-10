@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout:     post
 title:      Unix System-Level I/O (2)
 subtitle:   
@@ -8,7 +8,7 @@ header-img: img/post-bg-linux.jpg
 catalog:    true
 tags:
     - Unix
---- -->
+---
 
 #Buffering in fread/fwrite
 In last blog, we simply talked about how Input/Output designed in Linux system, and stream buffer will only be flushed in some certain situations. Link to [last blog](http://doitzhong.com/2019/12/04/Unix-System-Level-I-O/).
