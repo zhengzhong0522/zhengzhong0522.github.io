@@ -3,7 +3,7 @@ layout:     post
 title:      Unix System-Level I/O (2)
 subtitle:   
 date:       2019-12-05
-author:     Hex
+author:     Sudo
 header-img: img/post-bg-linux.jpg
 catalog:    true
 tags:

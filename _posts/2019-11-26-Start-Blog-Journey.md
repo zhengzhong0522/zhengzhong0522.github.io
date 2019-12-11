@@ -3,7 +3,7 @@ layout:     post
 title:      Say hello to Blog
 subtitle:   
 date:       2019-11-26
-author:     Hex
+author:     Sudo
 header-img: img/post-bg-swift.jpg
 catalog:    true
 tags:
