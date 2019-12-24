@@ -130,9 +130,9 @@ def _normalize_idx(self, idx):
     return nidx
 ```
 
-- Next, we gonna to figure out how to access element.(get, delete, set )
+- Next, we gonna to figure out how to access element.(get, delete, set )  
 
-```Python
+```python
 def __getitem__(self, idx):
     """Implements `x = self[idx]`"""
     nidx = self._normalize_idx(idx)
@@ -157,9 +157,9 @@ def __delitem__(self, idx):
     del self.data[len(self.data) - 1]
 ```
 
-- Stringification
+- Stringification  
 
-```Python
+```python
 def __str__(self):
     """Implements `str(self)`. Returns '[]' if the list is empty, else
     returns `str(x)` for all values `x` in this list, separated by commas
@@ -183,9 +183,9 @@ def __str__(self):
     return string
 ```
 
-- Single-element manipulation
+- Single-element manipulation  
 
-```Python
+```python
 def append(self, value):
     """Appends value to the end of this list."""
 
@@ -259,9 +259,9 @@ def __contains__(self, value):
 ```
 
 
-- Iteration
+- Iteration  
 
-```Python
+```python
 def __iter__(self):
     """Supports iteration (via `iter(self)`)"""
     for i in range(len(self.data)):
