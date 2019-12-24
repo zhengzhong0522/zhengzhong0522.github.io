@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout:     post
 title:      Data Structure -- Implement Arraylist in Python
 subtitle:   
@@ -9,7 +9,7 @@ catalog:    true
 tags:
     - Python
     - Data Structure
---- -->
+---
 
 # The Array-Backed List
 
