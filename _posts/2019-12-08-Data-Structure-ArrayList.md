@@ -119,7 +119,8 @@ class ArrayList:
 ## 3. Implement Above API of Array List
 
 - First of all, define a normalization function inside ArrayList class to normalize "index" in case of using entering negative index. If user enter negative index, we just assume that he wants to read element from tail to head. For example, index = -1, the last element of the list will be reached.
-```python
+
+```Python
 def _normalize_idx(self, idx):
     nidx = idx
     if nidx < 0:
@@ -130,6 +131,7 @@ def _normalize_idx(self, idx):
 ```
 
 - Next, we gonna to figure out how to access element.(get, delete, set )
+
 ```Python
 def __getitem__(self, idx):
     """Implements `x = self[idx]`"""
@@ -156,6 +158,7 @@ def __delitem__(self, idx):
 ```
 
 - Stringification
+
 ```Python
 def __str__(self):
     """Implements `str(self)`. Returns '[]' if the list is empty, else
@@ -257,6 +260,7 @@ def __contains__(self, value):
 
 
 - Iteration
+
 ```Python
 def __iter__(self):
     """Supports iteration (via `iter(self)`)"""
