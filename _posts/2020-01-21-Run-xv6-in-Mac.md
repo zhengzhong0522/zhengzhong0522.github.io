@@ -1,10 +1,10 @@
 ---
 layout:     post
 title:      Run Xv6 on Mac
-subtitle:   sicp notes
+subtitle:   
 date:       2020-01-21
 author:     Sudo
-header-img: img/post-bg-o.jpg
+header-img: img/home-bg-o.jpg
 catalog:    true
 tags:
     - Linux
