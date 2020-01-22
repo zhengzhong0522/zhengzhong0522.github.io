@@ -26,8 +26,8 @@ You might find that you fail to install virtualbox on Mac. Please check these [s
 ### Get started
 - Project setup
 ```
-$ mkdir sample
-$ cd sample
+$ mkdir xv6
+$ cd xv6
 $ vagrant init hashicorp/bionic64
 ```
 - Installing a Box
